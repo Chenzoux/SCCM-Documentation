@@ -1,1 +1,12 @@
+#Mostrar dominio actual CMD
+nltest /dsgetdc:
+systeminfo
+wmic computersystem get domain
+echo %USERDOMAIN%
 
+#mostrar dominio actual PS
+(Get-WmiObject Win32_ComputerSystem).Domain
+
+#Resolver DNS PS
+nslookup dominio.local
+nslookup _ldap._tcp.dc._msdcs.dominio.local
