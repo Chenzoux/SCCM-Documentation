@@ -1,0 +1,2 @@
+#convertir ESD a WIM
+dism /Export-Image /SourceImageFile:"C:\SMSPKG\Windows 10\install.esd" /SourceIndex:6 /DestinationImageFile:"C:\SMSPKG\Windows 10\install.wim" /Compress:max /CheckIntegrity
